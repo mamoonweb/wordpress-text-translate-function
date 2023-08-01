@@ -59,8 +59,10 @@ function translate_text_shortcode($atts) {
 }
 add_shortcode('translate_text', 'translate_text_shortcode');
 
-    $post_title = get_the_title(1);
-	echo translate_to_arabic("Mamoon");
+	$post_title = get_the_title(1);
+    	echo do_shortcode( '[translate_text text="' . $post_title . '"]' );
+    	echo translate_to_arabic("Mamoon");
+
 
 
 ?>
